@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Информация о продукте</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>Цена: {{ product.price }}</p>
+    <p>Количество: {{ product.quantity }}</p>
+    {% if product.photo %}
+        <img src="{{ product.photo.url }}" alt="Фото продукта">
+    {% endif %}
+</body>
+</html>

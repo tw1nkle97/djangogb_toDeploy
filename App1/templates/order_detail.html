@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Информация о заказе</title>
+</head>
+<body>
+    <h1>Заказ №{{ order.id }}</h1>
+    <p>Дата заказа: {{ order.order_date }}</p>
+    <p>Клиент: {{ order.client.name }}</p>
+    <p>Товары в заказе:</p>
+    <ul>
+        {% for product in order.products.all %}
+            <li>{{ product.name }} - {{ product.price }} x {{ product.quantity }}</li>
+        {% endfor %}
+    </ul>
+    <p>Общая сумма: {{ order.total_sum }}</p>
+</body>
+</html>
